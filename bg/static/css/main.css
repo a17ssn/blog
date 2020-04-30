@@ -251,6 +251,7 @@
 .card-title {
 	margin-bottom: 0.75rem;
 	margin-top: 10px;
+	
 }
 
 .body-b .cards {
@@ -258,6 +259,12 @@
 }
 .body-b .card {
 	border: 0;
+}
+.body-b .card .artical{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }
 .body-b .card-body {
 	padding: 0;

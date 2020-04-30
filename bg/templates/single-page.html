@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+
+{%block body%}
+
+  
+  <!-- slider -->
+
+  <div class="slide"></div>
+    <div id="main-slider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inne">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+
+        <div class="over-la text-center justify-content-center">
+          <button type="button" class="btn btn-success btn-xs ">{{artical.tages}}</button>
+
+          <h1>{{artical}}</h1>
+
+          <div class="info">
+            <img class="rad" src="img/download.jpg" alt="">
+            <p class="card-text">By <span>{{artical.user}}</span> {{artical.created}}</p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- recent post -->
+
+  <section class="body-b">
+    <div class="container">
+
+      <div class="row">
+       
+        <div class="col-md-8">
+          
+          <div class="object-bage">
+            <p>
+              {{artical.content}}
+              
+            </p>
+
+            <div class="card mb-3">
+              <div class="no-gutters align-items-center">
+                
+                <img src="img/download.jpg" class="img-responsive" alt="...">
+
+                <div class="">
+                  <div class="card-body">
+                    <h5 class="card-title">Craig David .</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt 
+                      repellendus excepturi beatae 
+                      porro debitis voluptate nulla quo 
+                      veniam fuga sit molestias minus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- comments -->
+            <div class="comment">
+              <div class="container">
+                <h1>Comments</h1>
+
+                <div class="row comm">
+                  <div class="col-1">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  </div>
+                    <div class="col-10 info">
+                      <h6>Ahmed</h6>
+                      <p class="card-text"><small class="text-muted">April 25, 2020</small></p>
+                      <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
+                      </p>
+                      <button class="btn">Reblay</button>
+                    </div>
+                </div>
+                <div class="row replay comm">
+                  <div class="col-1">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  </div>
+                    <div class="col-10 info">
+                      <h6>Ahmed</h6>
+                      <p class="card-text"><small class="text-muted">April 25, 2020</small></p>
+                      <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
+                      </p>
+                      <button class="btn">Reblay</button>
+                    </div>
+                </div>
+                <div class="row comm">
+                  <div class="col-1">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  </div>
+                    <div class="col-10 info">
+                      <h6>Ahmed</h6>
+                      <p class="card-text"><small class="text-muted">April 25, 2020</small></p>
+                      <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
+                      </p>
+                      <button class="btn">Reblay</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- comment-form -->
+            <div class="comment-form">
+              <h4>Leave a Reply</h4>
+              <form class="form-contact comment_form" action="#" id="commentForm">
+                 <div class="row">
+                    <div class="col-12">
+                       <div class="form-group">
+                          <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Write Comment"></textarea>
+                       </div>
+                    </div>
+                    <div class="col-sm-6">
+                       <div class="form-group">
+                         
+                          <input class="form-control" name="name" id="inlineFormInput" type="text" placeholder="Name">
+                       </div>
+                    </div>
+                    <div class="col-sm-6">
+                       <div class="form-group">
+                          <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                       </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="form-group">
+                          <input class="form-control" name="website" id="website" type="text" placeholder="Website">
+                       </div>
+                    </div>
+                 </div>
+                 <button class="btn">Comment</button>
+              </form>
+           </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <!-- popular-posts -->
+          <div class="popular-posts">
+            <h1>POPULAR POSTS</h1>
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="img/10.jpg" class="img-responsive" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">POLITICSThe AI magically removes moving objects.</h5>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="img/quincy-alivio-UvgzVZimyWU-unsplash.png" class="img-responsive" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">POLITICSThe AI magically removes moving objects.</h5>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="img/quincy-alivio-UvgzVZimyWU-unsplash.png" class="img-responsive" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">POLITICSThe AI magically removes moving objects.</h5>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="img/quincy-alivio-UvgzVZimyWU-unsplash.png" class="" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">POLITICSThe AI magically removes moving objects.</h5>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category d-none d-md-block">
+            <h1>Categories</h1>
+            <ul class="list-unstyled">
+              <li><a href="#">PSD to html</a>(15)</li>
+              <li><a href="#">1 onepage</a>(15)</li>
+              <li><a href="#">Clean design</a>(15)</li>
+              <li><a href="#">1 Revision</a>(15)</li>
+              <li><a href="#">Well Documented</a>(15)</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- subscribe -->
+  <section class="subscribe">
+    <div class="container">
+      <div class="row justify-content-center text-center ">
+        <div class="col-md-5">
+          <h2>Subscribe to our news letter</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nesciunt error illum a explicabo, ipsam nostrum.</p>
+          <form action="#" class="d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email address">
+            <button type="submit" class="btn ">Subscribe</button>
+          </form>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+
+  
+  {% endblock %}

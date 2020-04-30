@@ -68,71 +68,27 @@
     <div class="row">
       <div class="card-deck col-md-8">
         <div class="row">
+          {% for artical in all_artical %}
 
           <div class="col-md-6 cards">
             <div class="card">
               <img src="img/card4.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <button type="button" class="btn btn-success btn-xs ">Natural</button>
-                <h5 class="card-title">POLITICSThe AI magically removes moving objects from videos.</h5>
+                <h5 class="card-title">{{artical}}</h5>
                 <div class="info">
                   <img class="rad" src="img/download.jpg" alt="">
-                  <p class="card-text"><small class="text-muted">By <span>Ahmed</span> April 25, 2020</small></p>
+                  <p class="card-text"><small class="text-muted">By <span>{{artical.user}}</span> {{artical.created}}</small></p>
                 </div>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-link">Read More</button>
+                <p class="card-text artical">{{artical.content}}</p>
+                <a href="{% url 'bg:blog_Page' artical.slug %}" class="btn btn-link"> Read More</a>
               </div>
             </div>
           </div>
-          <div class="col-md-6 cards">
-            <div class="card">
-              <img src="img/card4.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <button type="button" class="btn btn-success btn-xs ">Natural</button>
-                <h5 class="card-title">POLITICSThe AI magically removes moving objects from videos.</h5>
-                <div class="info">
-                  <img class="rad" src="img/download.jpg" alt="">
-                  <p class="card-text"><small class="text-muted">By <span>Ahmed</span> April 25, 2020</small></p>
-                </div>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-link">Read More</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 cards">
-            <div class="card">
-              <img src="img/card4.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <button type="button" class="btn btn-success btn-xs ">Natural</button>
-                <h5 class="card-title">POLITICSThe AI magically removes moving objects from videos.</h5>
-                <div class="info">
-                  <img class="rad" src="img/download.jpg" alt="">
-                  <p class="card-text"><small class="text-muted">By <span>Ahmed</span> April 25, 2020</small></p>
-                </div>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-link">Read More</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 cards">
-            <div class="card">
-              <img src="img/card4.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <button type="button" class="btn btn-success btn-xs ">Natural</button>
-                <h5 class="card-title">POLITICSThe AI magically removes moving objects from videos.</h5>
-                <div class="info">
-                  <img class="rad" src="img/download.jpg" alt="">
-                  <p class="card-text"><small class="text-muted">By <span>Ahmed</span> April 25, 2020</small></p>
-                </div>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-link">Read More</button>
-              </div>
-            </div>
-          </div>
+          
+          {% endfor %}
+
+          
         </div>
       </div>
       <div class="col-md-4">

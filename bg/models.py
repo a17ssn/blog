@@ -9,7 +9,7 @@ class Notes(models.Model):
   title   = models.CharField(max_length=50)
   slug    = models.SlugField(null=True , blank=True)
   content = models.TextField(blank=True)
-  created = models.DateTimeField(blank=True, auto_now=True , auto_now_add=True)
+  created = models.DateTimeField(blank=True , default=datetime.datetime.now)
   active  = models.BooleanField(default=True)
   tages   = models.CharField(blank=True, max_length=100)
   
@@ -20,7 +20,7 @@ class Notes(models.Model):
 
 
   def __str__(self):
-      return self.title
+    return self.title
   
 
 
