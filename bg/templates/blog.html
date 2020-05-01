@@ -2,7 +2,7 @@
 
 {%block body%}
 
-  
+
 <!-- slider -->
 
 <div id="carouselExampleIndicators" class="carousel slide slider" data-ride="carousel">
@@ -64,7 +64,12 @@
 <!-- recent post -->
 <section class="body-b">
   <div class="container">
-    <h1>Recent Posts</h1>
+    <div class="">
+      <h1 class="">Recent Posts</h1>
+
+      <a name="" id="" class="btn btn-primary" href="{% url 'bg:blod_add' %}" role="button">New Post</a>
+    </div>
+    
     <div class="row">
       <div class="card-deck col-md-8">
         <div class="row">
@@ -72,13 +77,18 @@
 
           <div class="col-md-6 cards">
             <div class="card">
-              <img src="img/card4.png" class="card-img-top" alt="...">
+              
+              {% if artical.img %}
+              <img src="{{artical.img.url}}" class="card-img-top" alt="{{artical}}">
+                
+              {% endif %}
+                
               <div class="card-body">
                 <button type="button" class="btn btn-success btn-xs ">Natural</button>
                 <h5 class="card-title">{{artical}}</h5>
                 <div class="info">
                   <img class="rad" src="img/download.jpg" alt="">
-                  <p class="card-text"><small class="text-muted">By <span>{{artical.user}}</span> {{artical.created}}</small></p>
+                  <p class="card-text"><small class="text-muted">By <span>{{artical.user}}</span> {{artical.created|date:"Y M j"}}</small></p>
                 </div>
                 <p class="card-text artical">{{artical.content}}</p>
                 <a href="{% url 'bg:blog_Page' artical.slug %}" class="btn btn-link"> Read More</a>

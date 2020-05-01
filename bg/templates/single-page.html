@@ -17,7 +17,7 @@
 
           <div class="info">
             <img class="rad" src="img/download.jpg" alt="">
-            <p class="card-text">By <span>{{artical.user}}</span> {{artical.created}}</p>
+            <p class="card-text">By <span>{{artical.user}}</span> {{artical.created|date:"Y M D"}}</p>
           </div>
         
         </div>
@@ -43,11 +43,11 @@
             <div class="card mb-3">
               <div class="no-gutters align-items-center">
                 
-                <img src="img/download.jpg" class="img-responsive" alt="...">
+                <img src="{{artical.img.url}}" class="img-responsive" alt="...">
 
                 <div class="">
                   <div class="card-body">
-                    <h5 class="card-title">Craig David .</h5>
+                    <h5 class="card-title">{{artical.user.username}}</h5>
                     <p class="card-text">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt 
                       repellendus excepturi beatae 
